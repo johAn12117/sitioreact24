@@ -6,7 +6,7 @@ function App(){
   const [idActual, setIdActual] = useState('');
   const [docsBD, setDocsBD] = useState([]);
   /////////////LECTURA A BD///////////////
-  const fnRed = () =>{
+  const fnRed = async () =>{
     console.log("Lectura de base de datos");
   }
 
