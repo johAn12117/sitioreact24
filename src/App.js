@@ -3,7 +3,7 @@ import AppForm from "./componente/AppForm";
 
 function App(){
   //////////////////READ///////////////////
-  const [idActual, setIdActual] = useState('');
+  const [idActual, setIdActual] = useState("");
   const [docsBD, setDocsBD] = useState([]);
   /////////////LECTURA A BD///////////////
   const fnRed = async () =>{
@@ -17,6 +17,7 @@ function App(){
   return( 
     <div style={{background:"greenyellow", width:"350px"}}>
     <AppForm {...{idActual, setIdActual, fnRed}}/>
+    
     </div>
     );
 };
