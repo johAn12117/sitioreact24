@@ -5,12 +5,11 @@ import firebase, { bd } from './firebase';
 
 const AppFrom = (props) => {
 
-    const camposRegistro ={url:"", nombre:"", descripcion:""}
+    const camposRegistro ={nombre:"", edad:"", genero:""}
     const [objeto, setObjeto] = useState(camposRegistro);
 
-    
-    
     const controlarEstadoCambio = (e) => {  
+        console.log("asdsa")
         const {name, value} = e.target;
         setObjeto({...objeto,[name]:value});   
     };
@@ -46,13 +45,13 @@ const AppFrom = (props) => {
         <div style={{background:"orange", padding:"10px",textAlign:"center"}}>
         <h1>AppFrom.js</h1>
         <form onSubmit={controlSubmit}>
-            <input type="text" name="url" placeholder="Url..."
+            <input type="text" name="nombre" placeholder="nombre..."
             onChange={controlarEstadoCambio} value={objeto.url}/><br/>
 
-            <input type="text" name="nombre" placeholder="Nombre..."
+            <input type="text" name="edad" placeholder="edad..."
             onChange={controlarEstadoCambio} value={objeto.nombre}/><br/>
 
-            <input type="text" name="descripcion" placeholder="Descripcion..."
+            <input type="text" name="genero" placeholder="genero..."
             onChange={controlarEstadoCambio} value={objeto.descripcion}/><br/>
 
             <button>
